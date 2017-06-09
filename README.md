@@ -1,4 +1,4 @@
-# README
+# Generic Rails API
 
 This is a generic API with token-based authentication. It is the starting ground
 for any and all Rails API applications that I will build.
