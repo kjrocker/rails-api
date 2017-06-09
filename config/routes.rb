@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  scope '/api' do
+    scope module: :v1 do
+      post 'user_token' => 'user_token#create'
+      resources :users, only: [:create, :update, :show]
+    end
+  end
 end
