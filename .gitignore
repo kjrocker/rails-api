@@ -13,6 +13,10 @@
 !/log/.keep
 !/tmp/.keep
 
+# Let front-end generate /public
+/public/*
+!/public/.keep
+
 # Ignore Byebug command history file.
 .byebug_history
 
