@@ -1,0 +1,3 @@
+class Rack::Attack
+  # your custom configuration...
+end
