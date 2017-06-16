@@ -22,3 +22,23 @@ Planned or Possible Features
 * Refresh tokens to go along with my session tokens
 * Locking down the API itself, provide API keys for third-party APIs
 * Optional branch with Helix, for performance-critical operations or Rust aficionados
+
+# Usage
+Don't forget the `--recursive` flag when cloning the repository!
+
+Setting up the application:
+```zsh
+  bin/setup
+```
+Starting the development server(s):
+```zsh
+  rails start
+```
+Starting a production style server:
+```zsh
+  rails start:production
+```
+Starting just the API
+```zsh
+  rails server
+```
