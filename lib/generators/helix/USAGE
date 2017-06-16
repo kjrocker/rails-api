@@ -1,0 +1,8 @@
+Description:
+    A wrapper for helix:crate that includes tests and build instructions
+
+Example:
+    rails generate helix CrateName
+
+    This will create:
+        what/will/it/create
