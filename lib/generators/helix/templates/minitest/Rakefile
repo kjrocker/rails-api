@@ -1,0 +1,12 @@
+require 'bundler/setup'
+import 'lib/tasks/helix_runtime.rake'
+
+require 'rake/testtask'
+
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'test'
+  t.pattern = 'test/**/*_test.rb'
+end
+
+task :test => :build
+task :default => :test
