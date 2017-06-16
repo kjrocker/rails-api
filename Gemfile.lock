@@ -73,6 +73,12 @@ GEM
       thor (~> 0.19.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    helix-rails (0.5.0)
+      helix_runtime (>= 0.5.0)
+      rails (>= 4.0)
+    helix_runtime (0.6.1)
+      rake (>= 10.0)
+      thor (~> 0.19.4)
     i18n (0.8.4)
     jsonapi-renderer (0.1.2)
     jwt (1.5.6)
@@ -199,6 +205,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   foreman
+  helix-rails
   jwt
   knock
   listen

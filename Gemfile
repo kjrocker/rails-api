@@ -24,6 +24,9 @@ gem 'scenic'
 gem 'paranoia'
 gem 'sidekiq'
 
+# Rust, because why not?
+gem 'helix-rails'
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'database_cleaner'
