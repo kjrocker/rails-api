@@ -26,6 +26,8 @@ Planned or Possible Features
 * Locking down the API itself, provide API keys for third-party APIs
 * See about merging my helix generator into `helix_rails`
     * Related: investigate generator hooks instead of coding each testing library manually.
+* Look into storing heroku build information in the repository...somehow
+    * I will have this functionality if I have to write it myself!
 
 # Usage
 Don't forget the `--recursive` flag when cloning the repository!
@@ -46,3 +48,37 @@ Starting just the API
 ```zsh
   rails server
 ```
+
+# Deployment
+This app is built to be deployed on Heroku. To run, you will need to setup the following buildpacks.
+
+Without Helix:
+```zsh
+  heroku buildpacks:add heroku/nodejs --index 1
+  heroku buildpacks:add heroku/ruby --index 2
+```
+
+With Helix:
+```zsh
+  heroku buildpacks:add https://github.com/hone/heroku-buildpack-rust --index 1
+  heroku buildpacks:add heroku/nodejs --index 2
+  heroku buildpacks:add heroku/ruby --index 3
+```
+
+The Rust buildpack compiles the Rust extensions.
+
+The NodeJS buildpack activates the `package.json` file at the project root, which compiles the React client and moves it to `public`.
+
+The Ruby buildpack runs and serves the application as a whole.
+
+# Helix
+
+The Helix manuals will tell you to use the `helix:crate` generator for creating Rust addons.
+
+Don't do that with this project. I've created a custom generator that runs `helix:crate`, and then adds files related to testing. My generator is also snake_case vs CamelCase insensitive.
+
+```zsh
+  rails generate helix ModuleName --test [rspec/minitest]
+```
+
+Without the `--test` option, it defaults to Minitest.
