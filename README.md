@@ -17,11 +17,15 @@ Notable features include:
 * Configuration for using a complete React front-end within a single heroku application
     * Because it's easy once you do it once, but hard to do the first time
     * Due to Rails 5.1 breaking this setup, the app is locked at Rails 5.0.3
+* Configuration for painless Helix integration in the `helix` branch
+    * Custom generators to make testing with Helix easier
+    * We're already using Ruby and Javascript really heavily, why not add Rust?
 
 Planned or Possible Features
 * Refresh tokens to go along with my session tokens
 * Locking down the API itself, provide API keys for third-party APIs
-* Optional branch with Helix, for performance-critical operations or Rust aficionados
+* See about merging my helix generator into `helix_rails`
+    * Related: investigate generator hooks instead of coding each testing library manually.
 
 # Usage
 Don't forget the `--recursive` flag when cloning the repository!
