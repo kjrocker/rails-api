@@ -50,7 +50,14 @@ Starting just the API
 ```
 
 # Deployment
-This app is built to be deployed on Heroku. To run, you will need to setup the following buildpacks.
+This app is built to be deployed on Heroku.
+
+First, create a heroku application with `heroku create`. Then run the following command to configure NPM correctly:
+```zsh
+  heroku config:set NPM_CONFIG_PRODUCTION=false
+```
+
+Then set up the following buildpacks.
 
 Without Helix:
 ```zsh
