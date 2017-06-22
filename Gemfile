@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-# Rails 5.1 has breaking changes
-gem 'rails', '~> 5.0.3'
+gem 'rails', '~> 5.1'
 
 # Database, server, security
 gem 'pg'
